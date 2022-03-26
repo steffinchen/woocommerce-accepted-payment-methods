@@ -101,6 +101,18 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 						'id' 		=> 'wc_apm_visa',
 						'type' 		=> 'checkbox'
 					),
+					array(
+						'name' 		=> __( 'Twint', 'woocommerce-accepted-payment-methods' ),
+						'desc' 		=> __( 'Display the Twint logo', 'woocommerce-accepted-payment-methods' ),
+						'id' 		=> 'wc_apm_twint',
+						'type' 		=> 'checkbox'
+					),
+					array(
+						'name' 		=> __( 'PostFinance', 'woocommerce-accepted-payment-methods' ),
+						'desc' 		=> __( 'Display the PostFinance logo', 'woocommerce-accepted-payment-methods' ),
+						'id' 		=> 'wc_apm_postfinance',
+						'type' 		=> 'checkbox'
+					),
 					array( 'type' => 'sectionend', 'id' => 'wc_apm_options' ),
 				);
 
@@ -115,6 +127,8 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 				add_option( 'wc_apm_bitcoin', 			'no' );
 				add_option( 'wc_apm_maestro', 			'no' );
 				add_option( 'wc_apm_cash_on_delivery', 	'no' );
+				add_option( 'wc_apm_twint', 	        'no' );
+				add_option( 'wc_apm_postfinance',    	'no' );
 				add_option( 'wc_apm_dankort', 	'no' );
 
 				// Admin
@@ -162,6 +176,8 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 			$maestro 	= get_option( 'wc_apm_maestro' );
 			$cod		= get_option( 'wc_apm_cash_on_delivery');
 			$dankort 	= get_option( 'wc_apm_dankort');
+			$twint 	    = get_option( 'wc_apm_twint');
+			$postfinance = get_option( 'wc_apm_postfinance');
 
 			// Display
 			echo '<ul class="accepted-payment-methods">';
@@ -175,6 +191,8 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 				if ( $mastercard == "yes" ) { echo '<li class="mastercard"><span>MasterCard</span></li>'; }
 				if ( $paypal == "yes" ) { echo '<li class="paypal"><span>PayPal</span></li>'; }
 				if ( $visa == "yes" ) { echo '<li class="visa"><span>Visa</span></li>'; }
+				if ( $twint == "yes" ) { echo '<li class="twint"><span>Twint</span></li>'; }
+				if ( $postfinance == "yes" ) { echo '<li class="postfinance"><span>PostFinance</span></li>'; }
 			echo '</ul>';
 		}
 	}
