@@ -1,128 +1,30 @@
-ul.accepted-payment-methods {
-  margin-left: 0;
-  margin-right: 0;
-  padding-left: 0;
-  padding-right: 0;
-  list-style: none;
+div.accepted-payment-methods {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 3px;
 }
-ul.accepted-payment-methods:after {
-  content: "";
-  display: block;
-  clear: both;
+div.accepted-payment-methods .card {
+  display: flex;
+  justify-content: center;
+  border: 1px solid grey;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  overflow: hidden;
+  padding: 1px;
+  background: white;
+  min-width: 38px;
+  height: 24px;
 }
-ul.accepted-payment-methods li {
-  padding-left: 0;
-  margin-left: 0;
-  list-style: none;
-  display: inline;
-  margin-right: 0.5em;
+div.accepted-payment-methods .card.visa img {
+  padding: 2px;
 }
-ul.accepted-payment-methods li span {
-  display: inline-block;
-  padding: 4px;
-  background: #fff;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-  width: 50px;
-  height: 16px;
-  text-align: left;
-  text-indent: -999em;
-  background-position: 4px 4px;
-  background-repeat: no-repeat;
-  box-sizing: content-box;
-  background-size: contain;
-  image-rendering: -webkit-optimize-contrast;
+div.accepted-payment-methods .card.twint,
+div.accepted-payment-methods .card.postfinance {
+  padding: 0;
+  border: none;
 }
-ul.accepted-payment-methods li.visa span {
-  background-image: url(../images/visa.png);
-}
-ul.accepted-payment-methods li.paypal span {
-  width: 61px;
-  background-image: url(../images/paypal.png);
-}
-ul.accepted-payment-methods li.mastercard span {
-  width: 26px;
-  background-image: url(../images/mastercard@2x.png);
-  background-size: 32px;
-  background-position: 1px 1px;
-}
-ul.accepted-payment-methods li.maestro span {
-  width: 26px;
-  background-image: url(../images/maestro@2x.png);
-}
-ul.accepted-payment-methods li.google span {
-  width: 77px;
-  background-image: url(../images/google.png);
-}
-ul.accepted-payment-methods li.american-express span {
-  width: 18px;
-  background-image: url(../images/amex.png);
-}
-ul.accepted-payment-methods li.discover span {
-  width: 96px;
-  background-image: url(../images/discover.png);
-}
-ul.accepted-payment-methods li.bitcoin span {
-  width: 77px;
-  background-image: url(../images/bitcoin.png);
-}
-ul.accepted-payment-methods li.cash-on-delivery span {
-  width: 27px;
-  background-image: url(../images/cod.png);
-}
-ul.accepted-payment-methods li.dakort span {
-  width: 29px;
-  background-image: url(../images/dankort.png);
-}
-ul.accepted-payment-methods li.twint span {
-  width: 70px;
-  background-image: url(../images/twint.png);
-}
-ul.accepted-payment-methods li.postfinance span {
-  width: 45px;
-  background-image: url(../images/postfinance.png);
-  background-position: 1px 1px;
-}
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1) {
-  ul.accepted-payment-methods li.visa span {
-    background-image: url(../images/visa@2x.png);
-    background-size: 50px 16px;
-  }
-  ul.accepted-payment-methods li.paypal span {
-    background-image: url(../images/paypal@2x.png);
-    background-size: 61px 16px;
-  }
-  ul.accepted-payment-methods li.mastercard span {
-    background-image: url(../images/mastercard@2x.png);
-    background-size: 26px 16px;
-  }
-  ul.accepted-payment-methods li.maestro span {
-    background-image: url(../images/maestro@2x.png);
-    background-size: 26px 16px;
-  }
-  ul.accepted-payment-methods li.google span {
-    background-image: url(../images/google@2x.png);
-    background-size: 77px 16px;
-  }
-  ul.accepted-payment-methods li.american-express span {
-    background-image: url(../images/amex@2x.png);
-    background-size: 18px 16px;
-  }
-  ul.accepted-payment-methods li.discover span {
-    background-image: url(../images/discover@2x.png);
-    background-size: 96px 16px;
-  }
-  ul.accepted-payment-methods li.bitcoin span {
-    background-image: url(../images/bitcoin@2x.png);
-    background-size: 77px 16px;
-  }
-  ul.accepted-payment-methods li.cash-on-delivery span {
-    background-image: url(../images/cod@2x.png);
-    background-size: 27px 16px;
-  }
-  ul.accepted-payment-methods li.dankort span {
-    background-image: url(../images/dankort@2x.png);
-    background-size: 29px 16px;
-  }
+div.accepted-payment-methods .card.postfinance {
+  background: none;
 }

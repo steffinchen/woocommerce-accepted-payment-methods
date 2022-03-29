@@ -47,36 +47,36 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 						'id' 		=> 'wc_apm_american_express',
 						'type' 		=> 'checkbox'
 					),
-					array(
-						'name' 		=> __( 'Bitcoin', 'woocommerce-accepted-payment-methods' ),
-						'desc' 		=> __( 'Display the Bitcoin logo', 'woocommerce-accepted-payment-methods' ),
-						'id' 		=> 'wc_apm_bitcoin',
-						'type' 		=> 'checkbox'
-					),
-					array(
-						'name' 		=> __( 'Cash on Delivery', 'woocommerce-accepted-payment-methods' ),
-						'desc' 		=> __( 'Display Cash on Delivery symbol', 'woocommerce-accepted-payment-methods' ),
-						'id' 		=> 'wc_apm_cash_on_delivery',
-						'type' 		=> 'checkbox'
-					),
-					array(
-						'name' 		=> __( 'Dankort', 'woocommerce-accepted-payment-methods' ),
-						'desc' 		=> __( 'Display the Dankort logo', 'woocommerce-accepted-payment-methods' ),
-						'id' 		=> 'wc_apm_dankort',
-						'type' 		=> 'checkbox'
-					),
+					// array(
+					// 	'name' 		=> __( 'Bitcoin', 'woocommerce-accepted-payment-methods' ),
+					// 	'desc' 		=> __( 'Display the Bitcoin logo', 'woocommerce-accepted-payment-methods' ),
+					// 	'id' 		=> 'wc_apm_bitcoin',
+					// 	'type' 		=> 'checkbox'
+					// ),
+					// array(
+					// 	'name' 		=> __( 'Cash on Delivery', 'woocommerce-accepted-payment-methods' ),
+					// 	'desc' 		=> __( 'Display Cash on Delivery symbol', 'woocommerce-accepted-payment-methods' ),
+					// 	'id' 		=> 'wc_apm_cash_on_delivery',
+					// 	'type' 		=> 'checkbox'
+					// ),
+					// array(
+					// 	'name' 		=> __( 'Dankort', 'woocommerce-accepted-payment-methods' ),
+					// 	'desc' 		=> __( 'Display the Dankort logo', 'woocommerce-accepted-payment-methods' ),
+					// 	'id' 		=> 'wc_apm_dankort',
+					// 	'type' 		=> 'checkbox'
+					// ),
 					array(
 						'name' 		=> __( 'Discover', 'woocommerce-accepted-payment-methods' ),
 						'desc' 		=> __( 'Display the Discover logo', 'woocommerce-accepted-payment-methods' ),
 						'id' 		=> 'wc_apm_discover',
 						'type' 		=> 'checkbox'
 					),
-					array(
-						'name' 		=> __( 'Google', 'woocommerce-accepted-payment-methods' ),
-						'desc' 		=> __( 'Display the Google logo', 'woocommerce-accepted-payment-methods' ),
-						'id' 		=> 'wc_apm_google',
-						'type' 		=> 'checkbox'
-					),
+					// array(
+					// 	'name' 		=> __( 'Google', 'woocommerce-accepted-payment-methods' ),
+					// 	'desc' 		=> __( 'Display the Google logo', 'woocommerce-accepted-payment-methods' ),
+					// 	'id' 		=> 'wc_apm_google',
+					// 	'type' 		=> 'checkbox'
+					// ),
 					array(
 						'name' 		=> __( 'Maestro', 'woocommerce-accepted-payment-methods' ),
 						'desc' 		=> __( 'Display the Maestro logo', 'woocommerce-accepted-payment-methods' ),
@@ -119,17 +119,17 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 				// Default options
 				add_option( 'wc_apm_label', 			'' );
 				add_option( 'wc_apm_american_express', 	'no' );
-				add_option( 'wc_apm_google', 			'no' );
 				add_option( 'wc_apm_mastercard', 		'no' );
 				add_option( 'wc_apm_paypal', 			'no' );
 				add_option( 'wc_apm_visa', 				'no' );
 				add_option( 'wc_apm_discover', 			'no' );
-				add_option( 'wc_apm_bitcoin', 			'no' );
 				add_option( 'wc_apm_maestro', 			'no' );
-				add_option( 'wc_apm_cash_on_delivery', 	'no' );
 				add_option( 'wc_apm_twint', 	        'no' );
 				add_option( 'wc_apm_postfinance',    	'no' );
-				add_option( 'wc_apm_dankort', 	'no' );
+				// add_option( 'wc_apm_google', 			'no' );
+				// add_option( 'wc_apm_bitcoin', 			'no' );
+				// add_option( 'wc_apm_cash_on_delivery', 	'no' );
+				// add_option( 'wc_apm_dankort', 	'no' );
 
 				// Admin
 				add_action( 'woocommerce_settings_checkout', array( $this, 'admin_settings' ), 20 );
@@ -167,33 +167,35 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 	if ( ! function_exists( 'wc_accepted_payment_methods' ) ) {
 		function wc_accepted_payment_methods() {
 			$amex 		= get_option( 'wc_apm_american_express' );
-			$google 	= get_option( 'wc_apm_google' );
 			$mastercard = get_option( 'wc_apm_mastercard' );
 			$paypal 	= get_option( 'wc_apm_paypal' );
 			$visa 		= get_option( 'wc_apm_visa' );
 			$discover 	= get_option( 'wc_apm_discover' );
-			$bitcoin 	= get_option( 'wc_apm_bitcoin' );
 			$maestro 	= get_option( 'wc_apm_maestro' );
-			$cod		= get_option( 'wc_apm_cash_on_delivery');
-			$dankort 	= get_option( 'wc_apm_dankort');
 			$twint 	    = get_option( 'wc_apm_twint');
 			$postfinance = get_option( 'wc_apm_postfinance');
+			// $google 	= get_option( 'wc_apm_google' );
+			// $bitcoin 	= get_option( 'wc_apm_bitcoin' );
+			// $cod		= get_option( 'wc_apm_cash_on_delivery');
+			// $dankort 	= get_option( 'wc_apm_dankort');
+
+			$img_folder = plugin_dir_url( __FILE__ ) . 'assets/images/';
 
 			// Display
-			echo '<ul class="accepted-payment-methods">';
-				if ( $dankort == "yes" ) { echo '<li class="dankort"><span>Dankort</span></li>'; }
-				if ( $amex == "yes" ) { echo '<li class="american-express"><span>American Express</span></li>'; }
-				if ( $bitcoin == "yes" ) { echo '<li class="bitcoin"><span>Bitcoin</span></li>'; }
-				if ( $cod == "yes" ) { echo '<li class="cash-on-delivery"><span>Cash on Delivery</span></li>'; }
-				if ( $discover == "yes" ) { echo '<li class="discover"><span>Discover</span></li>'; }
-				if ( $google == "yes" ) { echo '<li class="google"><span>Google</span></li>'; }
-				if ( $mastercard == "yes" ) { echo '<li class="mastercard"><span>MasterCard</span></li>'; }
-				if ( $visa == "yes" ) { echo '<li class="visa"><span>Visa</span></li>'; }
-				if ( $paypal == "yes" ) { echo '<li class="paypal"><span>PayPal</span></li>'; }
-				if ( $maestro == "yes" ) { echo '<li class="maestro"><span>Maestro</span></li>'; }
-				if ( $twint == "yes" ) { echo '<li class="twint"><span>Twint</span></li>'; }
-				if ( $postfinance == "yes" ) { echo '<li class="postfinance"><span>PostFinance</span></li>'; }
-			echo '</ul>';
+			echo '<div class="accepted-payment-methods">';
+				if ( $mastercard == "yes" ) { echo '<div class="card mastercard"><img  alt="MasterCard" src="'.$img_folder.'mastercard.png" /></div>'; }
+				if ( $visa == "yes" ) { echo '<div class="card visa"><img  alt="Visa" src="'.$img_folder.'visa.png" /></div>'; }
+				if ( $paypal == "yes" ) { echo '<div class="card paypal"><img alt="PayPal" src="'.$img_folder.'paypal.png" /></div>'; }
+				if ( $twint == "yes" ) { echo '<div class="card twint"><img alt="Twint" src="'.$img_folder.'twint.png" /></div>'; }
+				if ( $postfinance == "yes" ) { echo '<div class="card postfinance"><img alt="PostFinance" src="'.$img_folder.'postfinance.png" /></div>'; }			
+				if ( $maestro == "yes" ) { echo '<div class="card"><img class="maestro" alt="Maestro" src="'.$img_folder.'maestro.png" /></div>'; }
+				if ( $amex == "yes" ) { echo '<div class="card"><img class="american-express" alt="American Express" src="'.$img_folder.'amex.png" /></div>'; }
+				if ( $discover == "yes" ) { echo '<div class="card"><img class="discover" alt="Discover" src="'.$img_folder.'discover.png" /></div>'; }
+				// if ( $bitcoin == "yes" ) { echo '<div class="card"><img class="bitcoin" alt="Bitcoin" src="'.$img_folder.'bitcoin.png" /></div>'; }
+				// if ( $cod == "yes" ) { echo '<div class="card"><img class="cash-on-deimgvery" alt="Cash on Delivery" src="'.$img_folder.'cod.png" /></div>'; }
+				// if ( $dankort == "yes" ) { echo '<div class="card"><img class="dankort" alt="Dankort" src="'.$img_folder.'dankort.png" /></div>'; }
+				// if ( $google == "yes" ) { echo '<div class="card"><img class="google" alt="Google" src="'.$img_folder.'google.png" /></div>'; }
+			echo '</div>';
 		}
 	}
 
