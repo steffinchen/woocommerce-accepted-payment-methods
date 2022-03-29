@@ -187,10 +187,10 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 				if ( $cod == "yes" ) { echo '<li class="cash-on-delivery"><span>Cash on Delivery</span></li>'; }
 				if ( $discover == "yes" ) { echo '<li class="discover"><span>Discover</span></li>'; }
 				if ( $google == "yes" ) { echo '<li class="google"><span>Google</span></li>'; }
-				if ( $maestro == "yes" ) { echo '<li class="maestro"><span>Maestro</span></li>'; }
 				if ( $mastercard == "yes" ) { echo '<li class="mastercard"><span>MasterCard</span></li>'; }
-				if ( $paypal == "yes" ) { echo '<li class="paypal"><span>PayPal</span></li>'; }
 				if ( $visa == "yes" ) { echo '<li class="visa"><span>Visa</span></li>'; }
+				if ( $paypal == "yes" ) { echo '<li class="paypal"><span>PayPal</span></li>'; }
+				if ( $maestro == "yes" ) { echo '<li class="maestro"><span>Maestro</span></li>'; }
 				if ( $twint == "yes" ) { echo '<li class="twint"><span>Twint</span></li>'; }
 				if ( $postfinance == "yes" ) { echo '<li class="postfinance"><span>PostFinance</span></li>'; }
 			echo '</ul>';

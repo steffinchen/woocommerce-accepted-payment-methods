@@ -42,6 +42,8 @@ ul.accepted-payment-methods {
 			background-position:4px 4px;
 			background-repeat: no-repeat;
 			box-sizing: content-box;
+			background-size: contain;
+			image-rendering: -webkit-optimize-contrast;
 		}
 		&.visa span {
 			background-image: url(../images/visa.png);
@@ -52,11 +54,13 @@ ul.accepted-payment-methods {
 		}
 		&.mastercard span {
 			width:26px;
-			background-image: url(../images/mastercard.png);
+			background-image: url(../images/mastercard@2x.png);
+			background-size: 32px;
+    	    background-position: 1px 1px;
 		}
 		&.maestro span {
 			width:26px;
-			background-image: url(../images/maestro.png);
+			background-image: url(../images/maestro@2x.png);
 		}
 		&.google span {
 			width:77px;
@@ -81,6 +85,15 @@ ul.accepted-payment-methods {
 		&.dakort span {
 			width:29px;
 			background-image: url(../images/dankort.png);
+		}
+		&.twint span {
+			width:70px;
+			background-image: url(../images/twint.png);
+		}
+		&.postfinance span {
+			width:45px;
+			background-image: url(../images/postfinance.png);
+			background-position: 1px 1px;
 		}
 	}
 }
