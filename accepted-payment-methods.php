@@ -183,18 +183,18 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 
 			// Display
 			echo '<div class="accepted-payment-methods">';
-				if ( $mastercard == "yes" ) { echo '<div class="card mastercard"><img  alt="MasterCard" src="'.$img_folder.'mastercard.png" /></div>'; }
-				if ( $visa == "yes" ) { echo '<div class="card visa"><img  alt="Visa" src="'.$img_folder.'visa.png" /></div>'; }
-				if ( $paypal == "yes" ) { echo '<div class="card paypal"><img alt="PayPal" src="'.$img_folder.'paypal.png" /></div>'; }
-				if ( $twint == "yes" ) { echo '<div class="card twint"><img alt="Twint" src="'.$img_folder.'twint.png" /></div>'; }
-				if ( $postfinance == "yes" ) { echo '<div class="card postfinance"><img alt="PostFinance" src="'.$img_folder.'postfinance.png" /></div>'; }			
-				if ( $maestro == "yes" ) { echo '<div class="card"><img class="maestro" alt="Maestro" src="'.$img_folder.'maestro.png" /></div>'; }
-				if ( $amex == "yes" ) { echo '<div class="card"><img class="american-express" alt="American Express" src="'.$img_folder.'amex.png" /></div>'; }
-				if ( $discover == "yes" ) { echo '<div class="card"><img class="discover" alt="Discover" src="'.$img_folder.'discover.png" /></div>'; }
-				// if ( $bitcoin == "yes" ) { echo '<div class="card"><img class="bitcoin" alt="Bitcoin" src="'.$img_folder.'bitcoin.png" /></div>'; }
-				// if ( $cod == "yes" ) { echo '<div class="card"><img class="cash-on-deimgvery" alt="Cash on Delivery" src="'.$img_folder.'cod.png" /></div>'; }
-				// if ( $dankort == "yes" ) { echo '<div class="card"><img class="dankort" alt="Dankort" src="'.$img_folder.'dankort.png" /></div>'; }
-				// if ( $google == "yes" ) { echo '<div class="card"><img class="google" alt="Google" src="'.$img_folder.'google.png" /></div>'; }
+				if ( $mastercard == "yes" ) { echo '<div class="card mastercard"><img  alt="Mastercard" src="'.$img_folder.'mastercard.png" title="Mastercard" /></div>'; }
+				if ( $visa == "yes" ) { echo '<div class="card visa"><img  alt="Visa" src="'.$img_folder.'visa.png" title="Visa" /></div>'; }
+				if ( $paypal == "yes" ) { echo '<div class="card paypal"><img alt="PayPal" src="'.$img_folder.'paypal.png" title="PayPal" /></div>'; }
+				if ( $twint == "yes" ) { echo '<div class="card twint"><img alt="Twint" src="'.$img_folder.'twint.png" title="Twint" /></div>'; }
+				if ( $postfinance == "yes" ) { echo '<div class="card postfinance"><img alt="PostFinance" src="'.$img_folder.'postfinance.png" title="PostCard" /></div>'; }			
+				if ( $maestro == "yes" ) { echo '<div class="card"><img class="maestro" alt="Maestro" src="'.$img_folder.'maestro.png" title="Maestro" /></div>'; }
+				if ( $amex == "yes" ) { echo '<div class="card"><img class="american-express" alt="American Express" src="'.$img_folder.'amex.png" title="American Express" /></div>'; }
+				if ( $discover == "yes" ) { echo '<div class="card"><img class="discover" alt="Discover" src="'.$img_folder.'discover.png" title="Discover" /></div>'; }
+				// if ( $bitcoin == "yes" ) { echo '<div class="card"><img class="bitcoin" alt="Bitcoin" src="'.$img_folder.'bitcoin.png" title="Bitcoin" /></div>'; }
+				// if ( $cod == "yes" ) { echo '<div class="card"><img class="cash-on-deimgvery" alt="Cash on Delivery" src="'.$img_folder.'cod.png" title="Cash on Delivery" /></div>'; }
+				// if ( $dankort == "yes" ) { echo '<div class="card"><img class="dankort" alt="Dankort" src="'.$img_folder.'dankort.png" title="Dankort" /></div>'; }
+				// if ( $google == "yes" ) { echo '<div class="card"><img class="google" alt="Google" src="'.$img_folder.'google.png" title="Google Pay" /></div>'; }
 			echo '</div>';
 		}
 	}
