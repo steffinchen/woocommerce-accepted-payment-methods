@@ -1,9 +1,9 @@
 === WooCommerce Accepted Payment Methods ===
-Contributors: jameskoster
+Contributors: jameskoster, steffinchen
 Tags: woocommerce, credit card, logo, payment
 Requires at least: 4.0
-Tested up to: 4.0
-Stable tag: 0.7.0
+Tested up to: 5.9.2
+Stable tag: 0.7.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -39,6 +39,13 @@ I've added some popular payment methods to begin with, if you want to see more l
 2. The widget
 
 == Changelog ==
+
+= 0.7.2 - 30/02/2022 =
+* Modifications and tweaks are all made with my store in mind and not widely tested!
+* Added Postfinance and Twint
+* Icons are normal images instead of background images
+* Removed Bitcoin, Dankort, Cash On Delivery, Google icons as they are very outdated and I have no need for them
+* Added tooltip texts
 
 = 0.6.0 - 12/09/2014 =
 * Tweak - Specify box sizing in css.
