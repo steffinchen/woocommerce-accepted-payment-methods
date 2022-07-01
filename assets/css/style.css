@@ -15,7 +15,10 @@ div.accepted-payment-methods .card {
   padding: 1px;
   background: white;
   min-width: 38px;
+}
+div.accepted-payment-methods .card > img {
   height: 24px;
+  max-width: unset;
 }
 div.accepted-payment-methods .card.visa img {
   padding: 2px;
